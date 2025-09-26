@@ -69,21 +69,6 @@ function createTable(rows, cols) {
 endglobal
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # == Fraction Match ==
 
 
@@ -496,11 +481,6 @@ snippet ott "leftarrow" iAm
 \leftarrow 
 endsnippet
 
-
-snippet ard "\Rightarrow" iAm
-\Rightarrow
-endsnippet
-
 priority 200
 snippet `(?<!\\)(cap|cup|land|lor|lnot|oplus|ominus|otimes|sqcap|sqcup|vdash|models)` "logic operator" iAm
 \\``rv = m[1]`` 
@@ -622,65 +602,6 @@ endsnippet
 
 # == Auto Environment ==
 
-# == My Command ==
-
-snippet nl "newline" wA
-\newline
-endsnippet
-
-snippet nt "notag" wA
-\notag
-endsnippet
-
-priority 150
-snippet `si(c|ns|s|m|min|tc|tk|g|kg|nm|um|mm|cm|km|us|ms|ev|ma|a|ohm|deg|pa|kpa|ml|l|mol|ma|a)\b` "SI basic units" wAm
-\SI{${1:}}{${2:``
-    const unitMap = {
-        c: '\\coulomb',
-        ns: '\\nano\\second',
-        s: '\\second',
-        m: '\\meter',
-        min: '\\minute',
-        tc: '\\celsius',
-        tk: '\\kelvin',
-        g: '\\gram',
-        kg: '\\kilo\\gram',
-        nm: '\\nano\\meter',
-        um: '\\micro\\meter',
-        mm: '\\milli\\meter',
-        cm: '\\centi\\meter',
-        km: '\\kilo\\meter',
-        us: '\\micro\\second',
-        ms: '\\milli\\second',
-        ev: '\\electronvolt',
-        mv: '\\milli\\volt',
-        v: '\\volt',
-        ohm: '\\ohm',
-        deg: '\\degree',
-        pa: '\\pascal',
-        kpa: '\\kilo\\pascal',
-        ml: '\\milli\\liter',
-        l: '\\liter',
-        mol: '\\mole',
-        ma: '\\milli\\ampere',
-        a: '\\ampere'
-    };
-    rv = unitMap[m[1]] || '\\mathrm{?}';
-``}}$0
-endsnippet
-
-
-
-
-
-
-
-
-
-
-
-
-
 # ==== Auto Math Mode ====
 
 snippet lm "inline Math" wA
@@ -699,40 +620,10 @@ snippet eqt "equation" wA
 \end{equation}
 endsnippet
 
-snippet enmrt "enumerate" wA
-\begin{enumerate}
-  ${1}
-\end{enumerate}
-endsnippet
-
-snippet itmz "itemize" wA
-\begin{itemize}
-  ${1}
-\end{itemize}
-endsnippet
-
-
-snippet item "item" wA
-\item
-endsnippet
-
-
 snippet eqs "equation*" wA
 \begin{equation*}
   ${1}
 \end{equation*}
-endsnippet
-
-snippet label "label" wA
-\label{${1}}
-endsnippet
-
-snippet ref "交叉引用" wA
-\ref{${1}}
-endsnippet
-
-snippet pageref "页面引用" wA
-\pageref{${1}}
 endsnippet
 
 # ==== Common Environment ====
@@ -745,30 +636,6 @@ snippet ali "aligned" iAm
 \begin{aligned}
 $1 \\\\
 \end{aligned}
-endsnippet
-
-snippet sct "section" wA
-\section{${1}}
-endsnippet
-
-snippet ssct "subsection" wA
-\subsection{${1}}
-endsnippet
-
-snippet sssct "subsubsection" wA
-\subsubsection{${1}}
-endsnippet
-
-snippet ssssct "subsubsubsection" wA
-\subsubsubsection{${1}}
-endsnippet
-
-snippet figure "figure-single" wA
-\begin{figure}[htbp]
-	\centering
-	\includegraphics[width=${1:0.4}\linewidth]{${2}.pdf}
-	\caption{${3}}
-\end{figure}
 endsnippet
 
 # == Auto Adaptive Close ==

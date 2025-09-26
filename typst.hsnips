@@ -45,46 +45,115 @@ snippet figim "引用图片" iwA
 )
 endsnippet
 
+snippet cases "引用图片" iAm
+cases(${1:a},${2:b})
+endsnippet
+
+
 snippet eblq "blockquote envirenment" iwA
 #blockquote[${1}]
 endsnippet
 
-snippet eans "答案环境" iwA
-#answer(``rv = '"'``答案``rv = '"'``)[${1}]
+snippet pin "pin" iwA
+#pin(``rv = '"'``${1}``rv = '"'``)
 endsnippet
 
-snippet eprob "问题环境" iwA
-#problem(``rv = '"'``问题``rv = '"'``)[${1}]
-endsnippet
 
 snippet edef "定义环境" iwA
-#definition(``rv = '"'``定义``rv = '"'``)[${1}]
+#definition(title: ``rv = '"'``${1}``rv = '"'``)[
+  ${2}
+]
 endsnippet
 
 snippet eeg "示例环境" iwA
-#example(``rv = '"'``示例``rv = '"'``)[${1}]
+#example[
+  ${1}
+]\
 endsnippet
 
-snippet etip "提示环境" iwA
-#tip(``rv = '"'``提示``rv = '"'``)[${1}]
+snippet eproof "证明环境" iwA
+#eproof[
+  ${1}
+]
 endsnippet
 
-snippet eatt "注意环境" iwA
-#attention(``rv = '"'``注意``rv = '"'``)[${1}]
+snippet eans "答案环境" iwA
+#proof(title: ``rv = '"'``${1:答案}``rv = '"'``)[
+  ${2}
+]\
 endsnippet
 
-snippet equo "引用环境" iwA
-#quote(``rv = '"'``引用``rv = '"'``)[${1}]
+snippet ecor "推论环境" iwA
+#corollary(title: ``rv = '"'``${1}``rv = '"'``)[
+  ${2}
+]
 endsnippet
 
-snippet ethe "定理环境" iwA
-#theorem(``rv = '"'``定理``rv = '"'``)[${1}]
+snippet ethm "定理环境" iwA
+#theorem(title: ``rv = '"'``${1}``rv = '"'``)[
+  ${2}
+]
 endsnippet
 
-snippet eprop "命题环境" iwA
-#proposition(``rv = '"'``命题``rv = '"'``)[${1}]
+snippet elemma "引理环境" iwA
+#lemma(title: ``rv = '"'``${1}``rv = '"'``)[
+  ${2}
+]
 endsnippet
 
+snippet eproposition "命题环境" iwA
+#proposition(title: ``rv = '"'``${1}``rv = '"'``)[
+  ${2}
+]
+endsnippet
+
+snippet eemphbox "强调环境" iwA
+#emph-box[
+  ${1}
+]
+endsnippet
+
+snippet equotebox "引用环境" iwA
+#emph-box[
+  ${1}
+]
+endsnippet
+
+snippet eremark "注解环境" iwA
+#remark[
+  ${1}
+]
+endsnippet
+
+snippet enotebox "注意box环境" iwA
+#note-box[
+  ${1}
+]
+endsnippet
+
+snippet etipbox "提示box环境" iwA
+#tip-box[
+  ${1}
+]
+endsnippet
+
+snippet eimportantbox "重要box环境" iwA
+#important-box[
+  ${1}
+]
+endsnippet
+
+snippet ewarningbox "警告box环境" iwA
+#warning-box[
+  ${1}
+]
+endsnippet
+
+snippet ecautionbox "小心box环境" iwA
+#caution-box[
+  ${1}
+]
+endsnippet
 
 snippet pri "'prime" iwm
 ^prime
@@ -94,14 +163,41 @@ snippet txt "text" iAm
 #text[${1}]
 endsnippet
 
+snippet abs "abs" iAm
+abs(${1})
+endsnippet
+
+snippet ard "arrow.double" iAm
+arrow.double
+endsnippet
 
 
-snippet pp "parenthesis" iAm
+snippet pp "parenthesis" im
 (${1})
 endsnippet
 
 snippet lim "limit" iAm
 lim_(${1:n} -> ${2:+oo} )
+endsnippet
+
+snippet +- "+-" iAm
+plus.minus
+endsnippet
+
+snippet -+ "-+" iAm
+minus.plus
+endsnippet
+
+snippet gfi "格里菲斯里的从源点到场点" iAm
+bold(dotless.i)
+endsnippet
+
+snippet va "箭头矢量" iAm
+va(${1:a})
+endsnippet
+
+snippet vu "单位矢量" iAm
+vu(${1:a})
 endsnippet
 
 snippet dint "integrall" iAm
@@ -182,21 +278,21 @@ snippet `(\)|mu|alpha|sigma|rho|beta|gamma|delta|zeta|eta|varepsilon|epsilon|the
 `` rv = m[1] + "_" + m[2].substring(0, 1) ``
 endsnippet
 
-snippet `(?<![A-Za-z])([A-Za-hk-z01])(grave|acute|hat|tilde|macron|breve|dot|ddot|dddot|ddddot|diaer|circle|caron|vec|upright|italic|b|sans|frak|mono|bb|cal|ov)` "hat" iAm
+snippet `(?<![A-Za-z])([A-Za-hk-z01])(grave|acute|hat|tilde|macron|breve|dot|ddot|dddot|ddddot|diaer|circle|caron|vec|upright|italic|b|sans|frak|mono|bb|cal|ov)` "hat" im
 ``
 const map = { "ddot": "dot.double", "dddot": "dot.triple", "ddddot": "dot.quad", "vec": "arrow", "b": "bold", "ov": "overline" }
 rv = (map[m[2]] || m[2]) + "(" + m[1] + ")"
 ``
 endsnippet
 
-snippet `(mu|alpha|sigma|rho|beta|gamma|delta|zeta|eta|varepsilon|epsilon|theta|iota|kappa|vartheta|lambda|nu|pi|rho|tau|upsilon|phi|chi|psi|omega|Gamma|Delta|Theta|Lambda|Xi|Pi|Sigma|Upsilon|Phi|Psi|Omega)(grave|acute|hat|tilde|macron|breve|dot|ddot|dddot|ddddot|diaer|circle|caron|vec|upright|italic|b|sans|frak|mono|bb|cal|ov)` "hat" iAm
+snippet `(mu|alpha|sigma|rho|beta|gamma|delta|zeta|eta|varepsilon|epsilon|theta|iota|kappa|vartheta|lambda|nu|pi|rho|tau|upsilon|phi|chi|psi|omega|Gamma|Delta|Theta|Lambda|Xi|Pi|Sigma|Upsilon|Phi|Psi|Omega)(grave|acute|hat|tilde|macron|breve|dot|ddot|dddot|ddddot|diaer|circle|caron|vec|upright|italic|b|sans|frak|mono|bb|cal|ov)` "hat" im
 ``
 const map = { "ddot": "dot.double", "dddot": "dot.triple", "ddddot": "dot.quad", "vec": "arrow", "b": "bold", "ov": "overline" }
 rv = (map[m[2]] || m[2]) + "(" + m[1] + ")"
 ``
 endsnippet
 
-snippet `((grave|acute|hat|tilde|macron|breve|dot|dot\.double|dot\.triple|dot\.quad|diaer|circle|acute\.double|caron|arrow|arrow\.l|upright|italic|bold|sans|frak|mono|bb|cal)\([a-zA-Z\d]+\))(grave|acute|hat|tilde|macron|breve|dot|ddot|dddot|ddddot|diaer|circle|caron|vec|upright|italic|b|sans|frak|mono|bb|cal|ov)` "hat" iAm
+snippet `((grave|acute|hat|tilde|macron|breve|dot|dot\.double|dot\.triple|dot\.quad|diaer|circle|acute\.double|caron|arrow|arrow\.l|upright|italic|bold|sans|frak|mono|bb|cal)\([a-zA-Z\d]+\))(grave|acute|hat|tilde|macron|breve|dot|ddot|dddot|ddddot|diaer|circle|caron|vec|upright|italic|b|sans|frak|mono|bb|cal|ov)` "hat" im
 ``
 const map = { "ddot": "dot.double", "dddot": "dot.triple", "ddddot": "dot.quad", "vec": "arrow", "b": "bold", "ov": "overline" }
 rv = (map[m[3]] || m[3]) + "(" + m[1] + ")"

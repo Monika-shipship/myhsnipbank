@@ -1005,3 +1005,36 @@ snippet `table(\d)(\d)` "create table with rows and columns" wA
 rv = createTable(m[1], m[2]);
 ``
 endsnippet
+
+# Visual 片段：对选中内容进行包装
+
+priority 300
+snippet U "underbrace 视觉片段" iAm
+\underbrace{ ${VISUAL} }_{ $0 }
+endsnippet
+
+priority 300
+snippet O "overbrace 视觉片段" iAm
+\overbrace{ ${VISUAL} }^{ $0 }
+endsnippet
+
+priority 300
+snippet B "underset 视觉片段" iAm
+\underset{ $0 }{ ${VISUAL} }
+endsnippet
+
+priority 300
+snippet C "\\cancel 视觉片段" iAm
+\cancel{ ${VISUAL} }
+endsnippet
+
+priority 300
+snippet K "\\cancelto 视觉片段" iAm
+\cancelto{ $0 }{ ${VISUAL} }
+endsnippet
+
+priority 300
+snippet S "\\sqrt 视觉片段" iAm
+\sqrt{ ${VISUAL} }
+endsnippet
+
