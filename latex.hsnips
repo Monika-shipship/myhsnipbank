@@ -181,6 +181,10 @@ snippet tp "to the ... power" iAm
 ^{${1:2}}$0
 endsnippet
 
+snippet pri "prime加撇" iAm
+^{\prime}
+endsnippet
+
 snippet sr "square" iAm
 ^{2}$0
 endsnippet
@@ -259,7 +263,7 @@ snippet mbf "mathbf" iAm
 \mathbf{$1}$0
 endsnippet
 
-snippet bft "txtbf" iA
+snippet tbf "txtbf" iA
 \textbf{$1}$0
 endsnippet
 
@@ -548,6 +552,10 @@ snippet AA "forall" iAm
 \forall 
 endsnippet
 
+snippet `::` "都有" iAm
+\text{都有}
+endsnippet
+
 snippet bec "because" iAm
 \because 
 endsnippet
@@ -741,6 +749,12 @@ snippet `-theo` "theorem定理环境" wA
 \begin{theorem}{${1:name}}{${2:label}}
   ${3}
 \end{theorem}
+endsnippet
+
+snippet `-proof` "proof证明环境" wA
+\begin{proof}
+  ${1}
+\end{proof}
 endsnippet
 
 snippet `-lemma` "lemma引理环境" wA
