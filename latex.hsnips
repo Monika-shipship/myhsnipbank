@@ -255,6 +255,10 @@ snippet mbf "mathbf" iAm
 \mathbf{$1}$0
 endsnippet
 
+snippet bft "txtbf" iAm
+\textbf{$1}$0
+endsnippet
+
 snippet mbm "mathbm" iAm
 \mathbm{$1}$0
 endsnippet
@@ -723,12 +727,86 @@ snippet eqs "equation*" wA
 \end{equation*}
 endsnippet
 
+snippet `-def` "definition定义环境" wA
+\begin{definition}{${1:name}}{${2:label}}
+  ${3}
+\end{definition}
+endsnippet
+
+snippet `-theo` "theorem定理环境" wA
+\begin{theorem}{${1:name}}{${2:label}}
+  ${3}
+\end{theorem}
+endsnippet
+
+snippet `-lemma` "lemma引理环境" wA
+\begin{lemma}{${1:name}}{${2:label}}
+  ${3}
+\end{lemma}
+endsnippet
+
+snippet `-coro` "corollary推论环境" wA
+\begin{corollary}{${1:name}}{${2:label}}
+  ${3}
+\end{corollary}
+endsnippet
+
+snippet `-prps` "proposition命题环境" wA
+\begin{proposition}{${1:name}}{${2:label}}
+  ${3}
+\end{proposition}
+endsnippet
+
+snippet `-prpt` "property性质环境" wA
+\begin{property}{${1:name}}{${2:label}}
+  ${3}
+\end{property}
+endsnippet
+
+snippet `-eg` "example例" wA
+\begin{example}
+  ${1}
+\end{example}
+endsnippet
+
+snippet `-note` "note" wA
+\begin{note}
+  ${1}
+\end{note}
+endsnippet
+
+snippet `-remark` "remark" wA
+\begin{remark}
+  ${1}
+\end{remark}
+endsnippet
+
+snippet `-prob` "problem" wA
+\begin{problem}
+  ${1}
+\end{problem}
+endsnippet
+
+snippet `-sol` "solution" wA
+\begin{solution}
+  ${1}
+\end{solution}
+endsnippet
+
 snippet label "label" wA
 \label{${1}}
 endsnippet
 
 snippet ref "交叉引用" wA
 \ref{${1}}
+endsnippet
+
+snippet eqref "公式引用" wA
+\eqref{${1}}
+endsnippet
+
+snippet href "链接引用" wA
+\href{${1}}{${2}}
 endsnippet
 
 snippet pageref "页面引用" wA
