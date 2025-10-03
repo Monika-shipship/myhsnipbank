@@ -747,6 +747,10 @@ $1 \\\\
 \end{aligned}
 endsnippet
 
+snippet chap "chapter" wA
+\chapter{${1}}
+endsnippet
+
 snippet sct "section" wA
 \section{${1}}
 endsnippet
