@@ -239,6 +239,10 @@ snippet txt "text" iAm
 \text{$1}$0
 endsnippet
 
+snippet ctx "text" iA
+\textcolor{${1:red}}{$0}
+endsnippet
+
 snippet tit "text it" iAm
 \textit{$1}$0
 endsnippet
@@ -255,7 +259,7 @@ snippet mbf "mathbf" iAm
 \mathbf{$1}$0
 endsnippet
 
-snippet bft "txtbf" iAm
+snippet bft "txtbf" iA
 \textbf{$1}$0
 endsnippet
 
