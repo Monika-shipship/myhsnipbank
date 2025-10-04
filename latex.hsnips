@@ -649,7 +649,7 @@ snippet nt "notag" wA
 endsnippet
 
 priority 150
-snippet `si(c|ns|s|m|min|tc|tk|g|kg|nm|um|mm|cm|km|us|ms|ev|ma|a|ohm|deg|pa|kpa|ml|l|mol|ma|a)\b` "SI basic units" wAm
+snippet `si(c|ns|s|m|min|tc|tk|g|kg|nm|um|mm|cm|km|us|ms|ev|ma|a|ohm|deg|pa|kpa|ml|l|mol|ma|a)\b` "SI basic units" wm
 \SI{${1:}}{${2:``
     const unitMap = {
         c: '\\coulomb',
@@ -1232,7 +1232,7 @@ snippet \box "Box"
 endsnippet
 
 
-priority 300
+priority 600
 snippet `table(\d)(\d)` "create table with rows and columns" wA
 ``
 rv = createTable(m[1], m[2]);
