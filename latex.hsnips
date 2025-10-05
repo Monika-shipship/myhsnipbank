@@ -441,6 +441,10 @@ snippet star "star" iAm
 ^{*}
 endsnippet
 
+snippet pri "prime" iAm
+^{\prime}
+endsnippet
+
 snippet `(?<!\\)(oint|iiint|iint|int)` "integrate" iAm
 \\``rv = m[1]``
 endsnippet
@@ -741,10 +745,14 @@ snippet case "cases" iAm
 \begin{cases} $1, & $2 \\\\ $3, & $4 \end{cases}
 endsnippet
 
-snippet ali "aligned" iAm
+snippet align "aligned" iAm
 \begin{aligned}
 $1 \\\\
 \end{aligned}
+endsnippet
+
+snippet chap "chapter" wA
+\chapter{${1}}
 endsnippet
 
 snippet sct "section" wA
