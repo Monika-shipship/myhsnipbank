@@ -181,6 +181,10 @@ snippet tp "to the ... power" iAm
 ^{${1:2}}$0
 endsnippet
 
+snippet pri "prime加撇" iAm
+^{\prime}
+endsnippet
+
 snippet sr "square" iAm
 ^{2}$0
 endsnippet
@@ -239,6 +243,10 @@ snippet txt "text" iAm
 \text{$1}$0
 endsnippet
 
+snippet ctx "text" iA
+\textcolor{${1:red}}{$0}
+endsnippet
+
 snippet tit "text it" iAm
 \textit{$1}$0
 endsnippet
@@ -253,6 +261,10 @@ endsnippet
 
 snippet mbf "mathbf" iAm
 \mathbf{$1}$0
+endsnippet
+
+snippet tbf "txtbf" iA
+\textbf{$1}$0
 endsnippet
 
 snippet mbm "mathbm" iAm
@@ -544,6 +556,10 @@ snippet AA "forall" iAm
 \forall 
 endsnippet
 
+snippet `::` "都有" iAm
+\text{都有}
+endsnippet
+
 snippet bec "because" iAm
 \because 
 endsnippet
@@ -637,7 +653,7 @@ snippet nt "notag" wA
 endsnippet
 
 priority 150
-snippet `si(c|ns|s|m|min|tc|tk|g|kg|nm|um|mm|cm|km|us|ms|ev|ma|a|ohm|deg|pa|kpa|ml|l|mol|ma|a)\b` "SI basic units" wAm
+snippet `si(c|ns|s|m|min|tc|tk|g|kg|nm|um|mm|cm|km|us|ms|ev|ma|a|ohm|deg|pa|kpa|ml|l|mol|ma|a)\b` "SI basic units" wm
 \SI{${1:}}{${2:``
     const unitMap = {
         c: '\\coulomb',
@@ -727,12 +743,92 @@ snippet eqs "equation*" wA
 \end{equation*}
 endsnippet
 
+snippet `-def` "definition定义环境" wA
+\begin{definition}{${1:name}}{${2:label}}
+  ${3}
+\end{definition}
+endsnippet
+
+snippet `-theo` "theorem定理环境" wA
+\begin{theorem}{${1:name}}{${2:label}}
+  ${3}
+\end{theorem}
+endsnippet
+
+snippet `-proof` "proof证明环境" wA
+\begin{proof}
+  ${1}
+\end{proof}
+endsnippet
+
+snippet `-lemma` "lemma引理环境" wA
+\begin{lemma}{${1:name}}{${2:label}}
+  ${3}
+\end{lemma}
+endsnippet
+
+snippet `-coro` "corollary推论环境" wA
+\begin{corollary}{${1:name}}{${2:label}}
+  ${3}
+\end{corollary}
+endsnippet
+
+snippet `-prps` "proposition命题环境" wA
+\begin{proposition}{${1:name}}{${2:label}}
+  ${3}
+\end{proposition}
+endsnippet
+
+snippet `-prpt` "property性质环境" wA
+\begin{property}{${1:name}}{${2:label}}
+  ${3}
+\end{property}
+endsnippet
+
+snippet `-eg` "example例" wA
+\begin{example}
+  ${1}
+\end{example}
+endsnippet
+
+snippet `-note` "note" wA
+\begin{note}
+  ${1}
+\end{note}
+endsnippet
+
+snippet `-remark` "remark" wA
+\begin{remark}
+  ${1}
+\end{remark}
+endsnippet
+
+snippet `-prob` "problem" wA
+\begin{problem}
+  ${1}
+\end{problem}
+endsnippet
+
+snippet `-sol` "solution" wA
+\begin{solution}
+  ${1}
+\end{solution}
+endsnippet
+
 snippet label "label" wA
 \label{${1}}
 endsnippet
 
 snippet ref "交叉引用" wA
 \ref{${1}}
+endsnippet
+
+snippet eqref "公式引用" wA
+\eqref{${1}}
+endsnippet
+
+snippet href "链接引用" wA
+\href{${1}}{${2}}
 endsnippet
 
 snippet pageref "页面引用" wA
@@ -1140,7 +1236,7 @@ snippet \box "Box"
 endsnippet
 
 
-priority 300
+priority 600
 snippet `table(\d)(\d)` "create table with rows and columns" wA
 ``
 rv = createTable(m[1], m[2]);
