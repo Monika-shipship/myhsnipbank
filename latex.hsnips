@@ -648,9 +648,9 @@ snippet nl "newline" wA
 \newline
 endsnippet
 
-snippet nt "notag" wA
-\notag
-endsnippet
+#snippet nt "notag" wA
+#\notag
+#endsnippet
 
 priority 150
 snippet `si(c|ns|s|m|min|tc|tk|g|kg|nm|um|mm|cm|km|us|ms|ev|ma|a|ohm|deg|pa|kpa|ml|l|mol|ma|a)\b` "SI basic units" wm
