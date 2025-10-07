@@ -182,7 +182,7 @@ snippet tp "to the ... power" iAm
 endsnippet
 
 snippet pri "prime加撇" iAm
-^{\prime}
+^{\prime $1}$0
 endsnippet
 
 snippet sr "square" iAm
@@ -996,6 +996,10 @@ endsnippet
 
 snippet `(?<!\\)part` "d/dx" iAm
 \frac{\partial ${1:V}}{\partial ${2:x}}$0
+endsnippet
+
+snippet `pt` "partail" iAm
+\partial
 endsnippet
 
 priority 300
