@@ -688,6 +688,10 @@ snippet norm iAm
 \left\| ${1} \right\|$2
 endsnippet
 
+snippet avg "average" iAm
+\langle ${1} \rangle $0
+endsnippet
+
 # == Snippet ==
 
 # ==== General Snippet ====
